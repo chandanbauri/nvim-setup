@@ -17,4 +17,12 @@ git clone git@github.com:chandanbauri/nvim-setup.git ~/.config/nvim/
 
 - Note in order to all the functionalities to work please make sure to install nerd fonts (specificly Ubuntu Nerd Fonts)
 
-- Note also you will probably to setup fzf in your system
+- Note also you will probably to setup fzf in your system along with ripgrep
+
+To install system dependent dependencies on ubuntu
+run the following command.
+
+```
+sudo apt install ripgrep wl-clipboard
+
+```
