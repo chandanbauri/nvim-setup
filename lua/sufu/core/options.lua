@@ -11,7 +11,10 @@ opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
-opt.wrap = false -- disable line wrapping
+vim.wo.wrap = true
+
+-- Increase the readahead buffer size for better performance with large files
+vim.go.readahead = 10000
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
