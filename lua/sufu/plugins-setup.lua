@@ -100,7 +100,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 
 	use({
-		"glepnir/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		branch = "main",
 		requires = {
 			{ "nvim-tree/nvim-web-devicons" },
@@ -135,10 +135,28 @@ return packer.startup(function(use)
 
 	-- Flutter Plugins
 
+	-- use("dart-lang/dart-vim-plugin")
+	-- use("thosakwe/vim-flutter")
+	-- use("natebosch/vim-lsc")
+	-- use("natebosch/vim-lsc-dart")
 	use("dart-lang/dart-vim-plugin")
-	use("thosakwe/vim-flutter")
 	use("natebosch/vim-lsc")
-	use("natebosch/vim-lsc-dart")
+	use({
+		"natebosch/vim-lsc-dart",
+		run = function()
+			vim.g.lsc_auto_map = true
+		end,
+	})
+
+	use({
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+	})
+	-- use({ "neoclide/coc.nvim", branch = "release" })
+	use("github/copilot.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()

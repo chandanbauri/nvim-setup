@@ -109,15 +109,30 @@ _G.packer_plugins = {
     path = "/home/sufu/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/sufu/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["dart-vim-plugin"] = {
     loaded = true,
     path = "/home/sufu/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
     url = "https://github.com/dart-lang/dart-vim-plugin"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/home/sufu/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
   fd = {
     loaded = true,
     path = "/home/sufu/.local/share/nvim/site/pack/packer/start/fd",
     url = "https://github.com/sharkdp/fd"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/sufu/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -147,7 +162,7 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/sufu/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -256,11 +271,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sufu/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
-  },
-  ["vim-flutter"] = {
-    loaded = true,
-    path = "/home/sufu/.local/share/nvim/site/pack/packer/start/vim-flutter",
-    url = "https://github.com/thosakwe/vim-flutter"
   },
   ["vim-lsc"] = {
     loaded = true,

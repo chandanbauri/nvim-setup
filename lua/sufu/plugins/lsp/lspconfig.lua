@@ -122,3 +122,10 @@ lspconfig["rust_analyzer"].setup({
 		"rust-analyzer",
 	},
 })
+
+-- configure dart lsp
+lspconfig["dartls"].setup({
+	-- Server-specific settings. See `:help lspconfig-setup`
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
