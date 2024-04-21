@@ -32,6 +32,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+	use("mfussenegger/nvim-dap")
 
 	use("BurntSushi/ripgrep")
 
@@ -81,6 +82,8 @@ return packer.startup(function(use)
 		end,
 	}) -- fuzzy finder
 
+	-- Dev environment
+	use("barrett-ruth/live-server.nvim")
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
@@ -134,12 +137,9 @@ return packer.startup(function(use)
 	use("rust-lang/rust.vim")
 
 	-- Flutter Plugins
-
-	-- use("dart-lang/dart-vim-plugin")
-	-- use("thosakwe/vim-flutter")
-	-- use("natebosch/vim-lsc")
-	-- use("natebosch/vim-lsc-dart")
 	use("dart-lang/dart-vim-plugin")
+	use("thosakwe/vim-flutter")
+
 	use("natebosch/vim-lsc")
 	use({
 		"natebosch/vim-lsc-dart",
@@ -147,7 +147,8 @@ return packer.startup(function(use)
 			vim.g.lsc_auto_map = true
 		end,
 	})
-
+	-- vim Script
+	use("iamcco/vim-language-server")
 	use({
 		"akinsho/flutter-tools.nvim",
 		requires = {
@@ -155,8 +156,13 @@ return packer.startup(function(use)
 			"stevearc/dressing.nvim", -- optional for vim.ui.select
 		},
 	})
-	-- use({ "neoclide/coc.nvim", branch = "release" })
-	use("github/copilot.vim")
+
+	-- huge file support
+	use({
+		"LunarVim/bigfile.nvim",
+	})
+	-- gradle Plugin
+	use("microsoft/vscode-gradle")
 
 	if packer_bootstrap then
 		require("packer").sync()

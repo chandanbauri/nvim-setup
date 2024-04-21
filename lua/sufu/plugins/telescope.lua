@@ -46,6 +46,43 @@ telescope.setup({
 			grep_open_files = false,
 			preview = false,
 		},
+		git_commits = {
+			file_ignore_patterns = file_ignore_patterns,
+			hidden = false,
+			grep_open_files = true,
+			preview = true,
+		},
+		git_bcommits = {
+			file_ignore_patterns = file_ignore_patterns,
+			hidden = false,
+			grep_open_files = true,
+			preview = true,
+		},
+		git_branches = {
+			file_ignore_patterns = file_ignore_patterns,
+			hidden = false,
+			grep_open_files = true,
+			preview = true,
+		},
+		git_status = {
+			file_ignore_patterns = file_ignore_patterns,
+			hidden = false,
+			grep_open_files = true,
+			preview = true,
+		},
+		git_stash = {
+			file_ignore_patterns = file_ignore_patterns,
+			hidden = false,
+			grep_open_files = true,
+			preview = true,
+		},
+		planets = {
+			preview = true,
+		},
+		spell_suggest = {
+			hidden = false,
+			preview = true,
+		},
 	},
 	extensions = {
 		fzf = {

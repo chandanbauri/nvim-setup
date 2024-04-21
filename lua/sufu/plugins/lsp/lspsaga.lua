@@ -18,4 +18,10 @@ saga.setup({
 			normal_bg = "#022746",
 		},
 	},
+	finder = {
+		max_height = 0.6,
+		keys = {
+			vsplit = "v",
+		},
+	},
 })
