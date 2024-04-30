@@ -20,7 +20,7 @@ local new_colors = {
 -- change nightlfy theme colors
 lualine_nightfly.normal = {
 	a = {
-    gui = "bold",
+		gui = "bold",
 		bg = new_colors.purple,
 		fg = new_colors.black,
 	},
@@ -38,6 +38,6 @@ lualine_nightfly.command = {
 -- configure lualine with modified theme
 lualine.setup({
 	options = {
-		theme = lualine_nightfly,
+		theme = "catppuccin",
 	},
 })

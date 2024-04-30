@@ -28,6 +28,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
+	keymap.set("n", "<leader>cff", "<cmd>lua vim.lsp.buf.format()<CR>", opts) -- see available code actions
 	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
 	keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
@@ -124,14 +125,30 @@ lspconfig["rust_analyzer"].setup({
 })
 
 -- configure dart lsp
--- lspconfig["dartls"].setup({
--- 	-- Server-specific settings. See `:help lspconfig-setup`
--- 	capabilities = capabilities,
--- 	on_attach = on_attach,
--- 	handlers = {
--- 		["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
--- 			-- Disable virtual_text
--- 			virtual_text = false,
--- 		}),
--- 	},
--- })
+lspconfig["dartls"].setup({
+	-- Server-specific settings. See `:help lspconfig-setup`
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = { "/Users/chandanbauri/sdks/flutter/flutter/bin/dart", "language-server", "--protocol=lsp" },
+	handlers = {
+		["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+			-- Disable virtual_text
+			virtual_text = false,
+		}),
+	},
+	filetypes = { "dart" },
+	root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
+	init_options = {
+		onlyAnalyzeProjectsWithOpenFiles = true,
+		suggestFromUnimportedLibraries = true,
+		closingLabels = true,
+		outline = true,
+		flutterOutline = true,
+	},
+	settings = {
+		dart = {
+			completeFunctionCalls = true,
+			showTodos = true,
+		},
+	},
+})
