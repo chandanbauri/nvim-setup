@@ -125,30 +125,30 @@ lspconfig["rust_analyzer"].setup({
 })
 
 -- configure dart lsp
-lspconfig["dartls"].setup({
-	-- Server-specific settings. See `:help lspconfig-setup`
-	capabilities = capabilities,
-	on_attach = on_attach,
-	cmd = { "/Users/chandanbauri/sdks/flutter/flutter/bin/dart", "language-server", "--protocol=lsp" },
-	handlers = {
-		["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-			-- Disable virtual_text
-			virtual_text = false,
-		}),
-	},
-	filetypes = { "dart" },
-	root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
-	init_options = {
-		onlyAnalyzeProjectsWithOpenFiles = true,
-		suggestFromUnimportedLibraries = true,
-		closingLabels = true,
-		outline = true,
-		flutterOutline = true,
-	},
-	settings = {
-		dart = {
-			completeFunctionCalls = true,
-			showTodos = true,
-		},
-	},
-})
+-- lspconfig["dartls"].setup({
+-- 	-- Server-specific settings. See `:help lspconfig-setup`
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- 	cmd = { "/Users/chandanbauri/sdks/flutter/flutter/bin/dart", "language-server", "--protocol=lsp" },
+-- 	handlers = {
+-- 		["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+-- 			-- Disable virtual_text
+-- 			virtual_text = false,
+-- 		}),
+-- 	},
+-- 	filetypes = { "dart" },
+-- 	root_dir = lspconfig.util.root_pattern("pubspec.yaml"),
+-- 	init_options = {
+-- 		onlyAnalyzeProjectsWithOpenFiles = true,
+-- 		suggestFromUnimportedLibraries = true,
+-- 		closingLabels = true,
+-- 		outline = true,
+-- 		flutterOutline = true,
+-- 	},
+-- 	settings = {
+-- 		dart = {
+-- 			completeFunctionCalls = true,
+-- 			showTodos = true,
+-- 		},
+-- 	},
+-- })

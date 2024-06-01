@@ -7,14 +7,14 @@
 -- end
 local fm = require("fluoromachine")
 
-function overrides(c)
+local function overrides(c)
 	return {
 		TelescopeResultsBorder = { fg = c.alt_bg, bg = c.alt_bg },
 		TelescopeResultsNormal = { bg = c.alt_bg },
 		TelescopePreviewNormal = { bg = c.bg },
 		TelescopePromptBorder = { fg = c.alt_bg, bg = c.alt_bg },
 		TelescopeTitle = { fg = c.fg, bg = c.comment },
-		TelescopePromptPrefix = { fg = c.purple },
+		-- TelescopePromptPrefix = { fg = c.purple },
 		["@type"] = { italic = true, bold = false },
 		["@function"] = { italic = false, bold = false },
 		["@comment"] = { italic = true, fg = c.cyan },
@@ -22,25 +22,25 @@ function overrides(c)
 		["@constant"] = { italic = false, bold = false, fg = c.red },
 		["@variable"] = { italic = true, fg = c.orange },
 		["@field"] = { italic = true, fg = c.orange },
-		["@parameter"] = { italic = true },
+		["@parameter"] = { italic = true, fg = c.orange },
 	}
 end
 
-function colors(_, d)
+local function colors(_, d)
 	return {
 		bg = "#190920",
-		alt_bg = d("#190920", 20),
-		cyan = "#49eaff",
-		red = "#ff1e34",
-		yellow = "#ffe756",
-		orange = "#f38e21",
-		pink = "#ffadff",
-		purple = "#9544f7",
+		alt_bg = d("#190920", 10),
+		cyan = "#E5B8F4",
+		red = "#7F27FF",
+		yellow = "#F8D082",
+		orange = "#E65C19",
+		pink = "#DA0C81",
+		purple = "#54B435",
 	}
 end
 
 fm.setup({
-	glow = false,
+	glow = true,
 	theme = "fluoromachine",
 	transparent = "full",
 	overrides = overrides,

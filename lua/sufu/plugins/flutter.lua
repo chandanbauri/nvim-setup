@@ -19,12 +19,12 @@ local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
-	client.server_capabilities.documentFormattingProvider = false
-	client.server_capabilities.documentRangeFormattingProvider = false
+	client.server_capabilities.documentFormattingProvider = true
+	client.server_capabilities.documentRangeFormattingProvider = true
 
-	if client.server_capabilities.signatureHelpProvider then
-		require("nvchad_ui.signature").setup(client)
-	end
+	-- if client.server_capabilities.signatureHelpProvider then
+	-- 	require("nvchad_ui.signature").setup(client)
+	-- end
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -45,7 +45,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 end
 
-local capabilities = cmp_nvim_lsp.default_capabilities()
+local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 flutterTools.setup({
 	ui = {
@@ -88,8 +88,8 @@ flutterTools.setup({
 		enabled = true, -- set to false to disable
 	},
 	dev_log = {
-		enabled = false,
-		notify_errors = false, -- if there is an error whilst running then notify the user
+		enabled = true,
+		notify_errors = true, -- if there is an error whilst running then notify the user
 		open_cmd = "tabedit", -- command to use to open the log buffer
 	},
 	dev_tools = {
@@ -98,7 +98,7 @@ flutterTools.setup({
 	},
 	outline = {
 		open_cmd = "30vnew", -- command to use to open the outline buffer
-		auto_open = true, -- if true this will open the outline automatically when it is first populated
+		auto_open = false, -- if true this will open the outline automatically when it is first populated
 	},
 	suggestFromUnimportedLibraries = true,
 	lsp = {

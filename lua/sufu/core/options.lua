@@ -14,7 +14,7 @@ opt.autoindent = true -- copy indent from current line when starting new one
 vim.wo.wrap = true
 
 -- Increase the readahead buffer size for better performance with large files
-vim.go.readahead = 10000
+-- vim.go.readahead = 10000
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
@@ -42,5 +42,4 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
-vim.o.font = "Roboto Mono for Powerline"
 vim.o.guifont = "Roboto Mono for Powerline"
