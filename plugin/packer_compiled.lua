@@ -84,10 +84,20 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ale = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/ale",
+    url = "https://github.com/dense-analysis/ale"
+  },
   ["bigfile.nvim"] = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/bigfile.nvim",
     url = "https://github.com/LunarVim/bigfile.nvim"
+  },
+  black = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/black",
+    url = "https://github.com/psf/black"
   },
   ["cmp-buffer"] = {
     loaded = true,
