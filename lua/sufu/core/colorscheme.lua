@@ -29,7 +29,7 @@ end
 local function colors(_, d)
 	return {
 		bg = "#190920",
-		alt_bg = d("#190920", 10),
+		alt_bg = "#190920",
 		cyan = "#E5B8F4",
 		red = "#7F27FF",
 		yellow = "#F8D082",

@@ -6,6 +6,9 @@ end
 
 -- enable comment
 live_server.setup({
+	custom = {
+		"--port=5500",
+	},
 	build = "npm install -g live-server",
 	cmd = { "LiveServerStart", "LiveServerStop" },
 	config = true,
