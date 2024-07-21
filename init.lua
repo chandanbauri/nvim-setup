@@ -1,3 +1,5 @@
+vim.g.python3_host_prog = vim.fn.expand("~/.pyenv/versions/3.11.9/bin/python3")
+vim.g.perl_host_prog = vim.fn.expand("/usr/bin/perl")
 require("sufu.plugins.telescope")
 require("sufu.plugins-setup")
 require("sufu.core.options")
