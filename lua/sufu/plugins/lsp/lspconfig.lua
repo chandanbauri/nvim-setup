@@ -122,20 +122,17 @@ lspconfig["rust_analyzer"].setup({
 		"stable",
 		"rust-analyzer",
 	},
+	cargo = {
+		allFeatures = true, -- Enable all features (optional, but recommended)
+	},
+	procMacro = {
+		enable = true, -- Make sure proc macro expansion is enabled
+	},
 })
-local python_on_attach = function()
-	vim.g.ale_linters = {
-		python = { "flake8", "pylint" },
-	}
-	vim.g.ale_fixers = {
-		python = { "black" },
-	}
-	vim.g.ale_fix_on_save = 1
-end
 
 lspconfig["pyright"].setup({
 	capabilities = capabilities,
-	on_attach = python_on_attach,
+	on_attach = on_attach,
 })
 
 -- configure dart lsp

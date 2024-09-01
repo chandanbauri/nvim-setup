@@ -133,7 +133,7 @@ return packer.startup(function(use)
 	})
 
 	-- auto closing
-	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+	use({ "windwp/nvim-autopairs", event = "InsertEnter" }) -- autoclose parens, brackets, quotes, etc...
 	use({
 		"windwp/nvim-ts-autotag",
 		config = function()
@@ -174,6 +174,11 @@ return packer.startup(function(use)
 	})
 	-- gradle Plugin
 	use("microsoft/vscode-gradle")
+
+	-- DataBase
+	use("tpope/vim-dadbod")
+	use("kristijanhusak/vim-dadbod-ui")
+	use("kristijanhusak/vim-dadbod-completion")
 
 	if packer_bootstrap then
 		require("packer").sync()

@@ -7,6 +7,7 @@ autotag.setup({
 	filetypes = {
 		"html",
 		"javascript",
+		"typescript",
 		"javascriptreact",
 		"typescriptreact",
 		"svelte",

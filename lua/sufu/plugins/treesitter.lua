@@ -12,15 +12,10 @@ treesitter.setup({
 		additional_vim_regex_highlighting = true,
 	}, -- enable indentation
 	indent = { enable = true },
-	-- autotag = {
-	-- 	enable = true,
-	-- 	filetypes = { "html", "xml", "php", "vue", "jsx", "tsx" },
-	-- },
 	ensure_installed = {
 		"json",
 		"javascript",
 		"typescript",
-		"tsx",
 		"yaml",
 		"html",
 		"css",
