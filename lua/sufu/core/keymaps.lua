@@ -65,3 +65,6 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 keymap.set("n", "<leader>tls", ":LiveServerToggle<CR>")
 
 keymap.set("n", "<leader>plt", "<cmd>Telescope planets<cr>")
+
+keymap.set("n", "<leader>du", ":DBUI<CR>")
+keymap.set("n", "<leader>dut", ":DBUIToggle<CR>")

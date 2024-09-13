@@ -1,3 +1,7 @@
+local lsp_zero_status, lsp_zero = pcall(require, "lsp-zero")
+if not lsp_zero_status then
+	return
+end
 -- import mason plugin safely
 local mason_status, mason = pcall(require, "mason")
 if not mason_status then
@@ -20,26 +24,40 @@ end
 mason.setup()
 
 mason_lspconfig.setup({
-	-- list of servers for mason to install
 	ensure_installed = {
-		"tsserver",
-		"html",
-		"cssls",
-		"tailwindcss",
-		"lua_ls",
-		"emmet_ls",
+		"ts_ls", -- TypeScript/JavaScript
+		"html", -- HTML
+		"cssls", -- CSS
+		"tailwindcss", -- Tailwind CSS
+		"lua_ls", -- Lua
+		"emmet_ls", -- Emmet
+		"rust_analyzer", -- Rust
+		"pyright", -- Python
+		"eslint", -- ESLint
+		"gradle_ls", -- Gradle
+		"vimls", -- Vim
 	},
-	-- auto-install configured servers (with lspconfig)
+	-- handlers = {
+	-- 	function(server_name) -- Default handler (optional)
+	-- 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	--     if server_name == "tsserver" then
+	--         server_name = "ts_ls"
+	--     end
+	-- 		lsp_zero.default_setup(server_name)
+	--   end
+	-- },
 	automatic_installation = true, -- not the same as ensure_installed
 })
-
 mason_null_ls.setup({
-	-- list of formatters & linters for mason to install
 	ensure_installed = {
-		"prettier", -- ts/js formatter
-		"stylua", -- lua formatter
-		"eslint_d",
+		"prettier", -- Formatter for TypeScript/JavaScript
+		"stylua", -- Lua formatter
+		"eslint_d", -- Linter for JavaScript/TypeScript
+		"black", -- Python formatter
+		"shfmt", -- Shell script formatter
+		"rustfmt", -- Rust formatter
+		"flake8", -- Python linter
+		"shellcheck", -- Shell script linter
 	},
-	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
 })
