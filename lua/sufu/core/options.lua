@@ -43,3 +43,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
 vim.o.guifont = "Roboto Mono for Powerline"
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

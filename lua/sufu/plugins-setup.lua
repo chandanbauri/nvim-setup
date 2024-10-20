@@ -179,17 +179,20 @@ return packer.startup(function(use)
 	use("tpope/vim-dadbod")
 	use("kristijanhusak/vim-dadbod-ui")
 	use("kristijanhusak/vim-dadbod-completion")
-  use {
-  'VonHeikemen/lsp-zero.nvim',
-  requires = {
-    'neovim/nvim-lspconfig',
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-nvim-lsp',
-    'L3MON4D3/LuaSnip',
-  },
-}
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		requires = {
+			"neovim/nvim-lspconfig",
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"hrsh7th/nvim-cmp",
+			"hrsh7th/cmp-nvim-lsp",
+			"L3MON4D3/LuaSnip",
+		},
+	})
+
+	-- FTP
+	use("tpope/vim-vinegar")
 
 	if packer_bootstrap then
 		require("packer").sync()

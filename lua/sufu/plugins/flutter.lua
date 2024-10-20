@@ -16,11 +16,13 @@ end
 dap.set_log_level("TRACE")
 
 local keymap = vim.keymap -- for conciseness
+local augroup = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
 	client.server_capabilities.documentFormattingProvider = true
 	client.server_capabilities.documentRangeFormattingProvider = true
+	vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 
 	-- if client.server_capabilities.signatureHelpProvider then
 	-- 	require("nvchad_ui.signature").setup(client)
