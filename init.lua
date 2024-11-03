@@ -1,5 +1,25 @@
 vim.g.python3_host_prog = vim.fn.expand("~/.pyenv/versions/3.11.9/bin/python3")
 vim.g.perl_host_prog = vim.fn.expand("/usr/bin/perl")
+-- Generate a unique filename for ShaDa
+local shada_dir = vim.fn.stdpath("state") .. "/shada/"
+local unique_shada_file = shada_dir .. "session_" .. os.time() .. "_" .. vim.fn.getpid() .. ".shada"
+
+-- Ensure the directory exists
+vim.fn.mkdir(shada_dir, "p")
+
+-- Set the ShaDa file for the current session
+vim.opt.shadafile = unique_shada_file
+
+-- Define a function to delete the ShaDa file on exit
+local function delete_shada_on_exit()
+	vim.fn.delete(unique_shada_file)
+end
+
+-- Register an autocommand to delete the ShaDa file on VimLeave
+vim.api.nvim_create_autocmd("VimLeave", {
+	callback = delete_shada_on_exit,
+})
+
 require("sufu.plugins.telescope")
 require("sufu.plugins-setup")
 require("sufu.core.options")

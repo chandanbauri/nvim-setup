@@ -123,7 +123,7 @@ flutterTools.setup({
 			enableSnippets = true,
 			updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
 			documentation = "full",
-			enableSdkFormatter = true,
+			-- enableSdkFormatter = true,
 		},
 	},
 })
