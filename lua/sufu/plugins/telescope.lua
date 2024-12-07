@@ -77,6 +77,7 @@ telescope.setup({
 			preview = true,
 		},
 		planets = {
+			hidden = false,
 			preview = true,
 		},
 		spell_suggest = {

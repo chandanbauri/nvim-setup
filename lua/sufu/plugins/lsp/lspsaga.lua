@@ -5,10 +5,18 @@ if not saga_status then
 end
 
 saga.setup({
-	-- keybinds for navigation in lspsaga window
+	code_action = {
+		enable = true,
+		show_server_name = true,
+		extend_gitsigns = true,
+		keys = {
+			quit = { "ESC", "q", "<leader>sx" },
+		},
+	},
 	scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
-	-- use enter to open file with definition preview
 	definition = {
+		width = 0.5,
+		height = 0.6,
 		keys = {
 			edit = "<CR>",
 		},
