@@ -43,9 +43,8 @@ cmp.setup({
 		{ name = "luasnip" }, -- snippets
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
-		{ name = "flutter-tools" },
-		{ name = "vim-flutter" },
-		{ name = "dart-vim-plugin" },
+		-- { name = "vim-flutter" },
+		-- { name = "dart-vim-plugin" },
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {
@@ -55,6 +54,12 @@ cmp.setup({
 		}),
 	},
 })
+
+-- cmp.setup.filetype("dart", {
+-- 	sources = cmp.config.sources({
+-- 		{ name = "nvim_lsp" },
+-- 	}),
+-- })
 
 local autopairs_setup, autopairs = pcall(require, "nvim-autopairs")
 if autopairs_setup then

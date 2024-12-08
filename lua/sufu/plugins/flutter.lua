@@ -13,6 +13,11 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
+local cmp_status, cmp = pcall(require, "cmp")
+if not cmp_status then
+	return
+end
+
 dap.set_log_level("TRACE")
 
 local keymap = vim.keymap -- for conciseness
