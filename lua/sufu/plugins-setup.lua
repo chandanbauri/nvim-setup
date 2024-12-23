@@ -92,7 +92,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- source for file system paths
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") -- snippet engine
+	use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" })
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
@@ -187,7 +187,7 @@ return packer.startup(function(use)
 			"williamboman/mason-lspconfig.nvim",
 			"hrsh7th/nvim-cmp",
 			"hrsh7th/cmp-nvim-lsp",
-			"L3MON4D3/LuaSnip",
+			-- "L3MON4D3/LuaSnip",
 		},
 	})
 
