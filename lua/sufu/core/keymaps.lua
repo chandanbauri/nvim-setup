@@ -3,6 +3,17 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+vim.api.nvim_create_user_command("CloseBuff", function()
+	-- local current_win = vim.api.nvim_get_current_win() -- Get current window ID
+	local last_win = vim.fn.winnr("$") -- Get the last window number
+
+	if last_win == 1 then
+		print("This is the last window!")
+	else
+		vim.cmd("close")
+	end
+end, { nargs = "?" })
+
 ---------------------
 -- General Keymaps
 ---------------------
@@ -33,7 +44,8 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 keymap.set("n", "<leader>tt", ":Lspsaga term_toggle<CR>")
 
 keymap.set("t", "<leader>tt", ":Lspsaga term_toggle<CR>")
-keymap.set("t", "<Esc>", [[<C-\><C-n>:Lspsaga term_toggle<CR>]], { noremap = true, silent = true })
+keymap.set("t", "<Esc>", "<C-\\><C-N>", { noremap = true, silent = true })
+keymap.set("n", "<Esc>", ":CloseBuff<CR>", { noremap = true, silent = true })
 
 ----------------------
 -- Plugin Keybinds
