@@ -25,6 +25,7 @@ null_ls.setup({
 				"json",
 				"ejs",
 				"python",
+				"dart",
 			}, -- include ejs filetype
 		}), -- js/ts formatter
 		formatting.stylua, -- lua formatter
