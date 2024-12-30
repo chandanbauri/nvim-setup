@@ -5,10 +5,14 @@ local keymap = vim.keymap -- for conciseness
 
 vim.api.nvim_create_user_command("CloseBuff", function()
 	-- local current_win = vim.api.nvim_get_current_win() -- Get current window ID
+	--
+	local bufnr = vim.api.nvim_get_current_buf()
+	local buftype = vim.bo[bufnr].buftype
+
 	local last_win = vim.fn.winnr("$") -- Get the last window number
 
-	if last_win == 1 then
-		print("This is the last window!")
+	if buftype == "" then
+		print("This is a normal buf can not close!")
 	else
 		vim.cmd("close")
 	end
