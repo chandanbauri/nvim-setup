@@ -34,6 +34,13 @@ local on_attach = function(client, bufnr)
 	-- end
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
+	vim.api.nvim_create_user_command(
+		"FlutterClean", -- Command name
+		function() -- Command behavior
+			vim.cmd("!flutter clean")
+		end,
+		{ nargs = "*", desc = "Custom command to do something" } -- Command options
+	)
 
 	-- set keybinds
 	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
@@ -56,25 +63,13 @@ local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_cli
 
 flutterTools.setup({
 	ui = {
-		-- the border type to use for all floating windows, the same options/formats
-		-- used for ":h nvim_open_win" e.g. "single" | "shadow" | {<table-of-eight-chars>}
 		border = "rounded",
-		-- This determines whether notifications are show with `vim.notify` or with the plugin's custom UI
-		-- please note that this option is eventually going to be deprecated and users will need to
-		-- depend on plugins like `nvim-notify` instead.
 		notification_style = "native",
 	},
 	decorations = {
 		statusline = {
-			-- set to true to be able use the 'flutter_tools_decorations.app_version' in your statusline
-			-- this will show the current version of the flutter app from the pubspec.yaml file
 			app_version = true,
-			-- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
-			-- this will show the currently running device if an application was started with a specific
-			-- device
 			device = true,
-			-- set to true to be able use the 'flutter_tools_decorations.project_config' in your statusline
-			-- this will show the currently selected project configuration
 			project_config = false,
 		},
 	},
@@ -82,8 +77,6 @@ flutterTools.setup({
 	debugger = { -- integrate with nvim dap + install dart code debugger
 		enabled = true,
 		run_via_dap = true, -- use dap instead of a plenary job to run flutter apps
-		-- if empty dap will not stop on any exceptions, otherwise it will stop on those specified
-		-- see |:help dap.set_exception_breakpoints()| for more info
 		exception_breakpoints = {},
 	},
 	widget_guides = {
