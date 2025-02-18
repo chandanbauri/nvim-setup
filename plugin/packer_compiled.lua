@@ -272,6 +272,11 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
   },
+  rustowl = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/rustowl",
+    url = "https://github.com/cordx56/rustowl"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",

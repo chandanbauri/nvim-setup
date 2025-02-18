@@ -146,6 +146,9 @@ return packer.startup(function(use)
 
 	-- Rust Plugin
 	use("rust-lang/rust.vim")
+	use({ "cordx56/rustowl", requires = {
+		"neovim/nvim-lspconfig",
+	} })
 
 	-- Flutter Plugins
 	use("dart-lang/dart-vim-plugin")
