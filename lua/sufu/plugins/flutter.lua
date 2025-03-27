@@ -29,10 +29,6 @@ local on_attach = function(client, bufnr)
 	client.server_capabilities.documentRangeFormattingProvider = true
 	vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 
-	-- if client.server_capabilities.signatureHelpProvider then
-	-- 	require("nvchad_ui.signature").setup(client)
-	-- end
-	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 	vim.api.nvim_create_user_command(
 		"FlutterClean", -- Command name

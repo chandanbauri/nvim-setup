@@ -18,6 +18,31 @@ vim.api.nvim_create_user_command("CloseBuff", function()
 	end
 end, { nargs = "?" })
 
+local function if_file_exists(filename)
+	local stat = vim.loop.fs_stat(filename)
+	return stat ~= nil
+end
+
+local function if_node_project()
+	local exists = if_file_exists("package.json")
+	if exists then
+		vim.api.nvim_create_user_command("NPMRUNDEV", function()
+			local buf = vim.api.nvim_create_buf(false, true)
+
+			vim.api.nvim_command("tabnew")
+			vim.api.nvim_command("buffer " .. buf)
+
+			vim.fn.termopen("npm run dev", {
+				on_exit = function()
+					print("npm run dev exited.")
+				end,
+			})
+		end, { nargs = "?" })
+	end
+end
+
+if_node_project()
+
 ---------------------
 -- General Keymaps
 ---------------------

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
+local package_path_str = "/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?.lua;/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1741730670/share/lua/5.1/?/init.lua;/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?.lua;/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1741730670/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/chandanbauri/.cache/nvim/packer_hererocks/2.1.1741730670/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -194,20 +194,10 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
-  ["mason-null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
-    url = "https://github.com/jayp0521/mason-null-ls.nvim"
-  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = false,
@@ -225,6 +215,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

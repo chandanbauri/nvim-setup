@@ -15,10 +15,10 @@ if not mason_lspconfig_status then
 end
 
 -- import mason-null-ls plugin safely
-local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
-if not mason_null_ls_status then
-	return
-end
+-- local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
+-- if not mason_null_ls_status then
+-- 	return
+-- end
 
 -- enable mason
 mason.setup()
@@ -48,16 +48,17 @@ mason_lspconfig.setup({
 	-- },
 	automatic_installation = true, -- not the same as ensure_installed
 })
-mason_null_ls.setup({
-	ensure_installed = {
-		"prettier", -- Formatter for TypeScript/JavaScript
-		"stylua", -- Lua formatter
-		"eslint_d", -- Linter for JavaScript/TypeScript
-		"black", -- Python formatter
-		"shfmt", -- Shell script formatter
-		"rustfmt", -- Rust formatter
-		"flake8", -- Python linter
-		"shellcheck", -- Shell script linter
-	},
-	automatic_installation = true,
-})
+
+-- mason_null_ls.setup({
+-- 	ensure_installed = {
+-- 		"prettier", -- Formatter for TypeScript/JavaScript
+-- 		"stylua", -- Lua formatter
+-- 		"eslint_d", -- Linter for JavaScript/TypeScript
+-- 		"black", -- Python formatter
+-- 		"shfmt", -- Shell script formatter
+-- 		"rustfmt", -- Rust formatter
+-- 		"flake8", -- Python linter
+-- 		"shellcheck", -- Shell script linter
+-- 	},
+-- 	automatic_installation = true,
+-- })
