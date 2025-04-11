@@ -194,10 +194,20 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
+  ["mason-nvim-lint"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/mason-nvim-lint",
+    url = "https://github.com/rshkarin/mason-nvim-lint"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = false,
@@ -246,6 +256,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["ollama.nvim"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/ollama.nvim",
+    url = "https://github.com/nomnivore/ollama.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

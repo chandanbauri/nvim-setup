@@ -45,6 +45,7 @@ cmp.setup({
 		{ name = "path" }, -- file system paths
 		{ name = "vim-flutter" },
 		{ name = "dart-vim-plugin" },
+    { name = "ollama", keyword_length = 2 },
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {

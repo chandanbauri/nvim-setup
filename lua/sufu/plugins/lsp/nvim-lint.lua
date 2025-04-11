@@ -6,7 +6,7 @@ require("lint").linters_by_ft = {
   javascriptreact = { "eslint_d" },
   typescript = { "eslint_d" },
   typescriptreact = { "eslint_d" },
-  -- lua = { "luacheck" },
+  lua = { "luacheck" },
   python = { "flake8" },
 }
 

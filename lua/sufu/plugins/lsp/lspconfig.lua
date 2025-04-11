@@ -151,6 +151,19 @@ lspconfig["pyright"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["intelephense"].setup({
+  settings = {
+    intelephense = {
+      format = {
+        enable= true,
+      },
+      files = {
+        maxSize = 5000000, -- Increase max file size if needed
+      },
+    },
+  },
+})
+
 -- configure dart lsp
 -- lspconfig["dartls"].setup({
 -- 	-- Server-specific settings. See `:help lspconfig-setup`

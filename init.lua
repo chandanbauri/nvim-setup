@@ -35,6 +35,7 @@ require("sufu.plugins.lsp.mason")
 require("sufu.plugins.lsp.lspsaga")
 require("sufu.plugins.lsp.lspconfig")
 -- require("sufu.plugins.lsp.null-ls") ** removed dependency as not maintained
+require("sufu.plugins.ai")
 require("sufu.plugins.lsp.nvim-lint")
 require("sufu.plugins.autopairs")
 require("sufu.plugins.autotag")
