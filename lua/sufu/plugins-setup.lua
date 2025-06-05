@@ -200,16 +200,25 @@ return packer.startup(function(use)
     },
   })
 
-  -- use({
-  --   "jackMort/ChatGPT.nvim",
-  --   requires = {
-  --     "MunifTanjim/nui.nvim",
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-telescope/telescope.nvim"
-  --   }
-  -- })
-  -- use({ "Bryley/neoai.nvim", requires = { "MunifTanjim/nui.nvim" } })
-  use({"nomnivore/ollama.nvim", requires = { "nvim-lua/plenary.nvim" }})
+  -- AI & MCP
+  use 'stevearc/dressing.nvim'
+  use 'MeanderingProgrammer/render-markdown.nvim'
+  use 'HakonHarnes/img-clip.nvim'
+  use ({
+    "zbirenbaum/copilot.lua",
+   })
+  use({
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+  })
+  use({ "nomnivore/ollama.nvim", requires = { "nvim-lua/plenary.nvim" } })
+  use({
+    "ravitemer/mcphub.nvim",
+    run = 'lua bundled_build.lua',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    }})
 
   -- FTP
   use("tpope/vim-vinegar")
