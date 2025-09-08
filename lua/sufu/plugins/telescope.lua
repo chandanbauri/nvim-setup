@@ -22,6 +22,14 @@ local file_ignore_patterns = {
 	"%.github/",
 }
 telescope.load_extension("fzf")
+-- Load Flutter extensions if only the file extension is .dart
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "dart",
+	callback = function()
+    telescope.load_extension("flutter")
+  end
+})
+
 -- configure telescope
 telescope.setup({
 	-- configure custom mappings

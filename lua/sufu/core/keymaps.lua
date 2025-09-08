@@ -1,5 +1,6 @@
 -- set leader key to space
 vim.g.mapleader = " "
+vim.g.rustfmt_autosave = 1
 
 local keymap = vim.keymap -- for conciseness
 

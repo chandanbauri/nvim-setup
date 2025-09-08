@@ -149,17 +149,11 @@ return packer.startup(function(use)
 
   -- Rust Plugin
   use("rust-lang/rust.vim")
-  use({
-    "cordx56/rustowl",
-    requires = {
-      "neovim/nvim-lspconfig",
-    }
-  })
 
   -- Flutter Plugins
   use("dart-lang/dart-vim-plugin")
   use("thosakwe/vim-flutter")
-
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
   use("natebosch/vim-lsc")
   use({
     "natebosch/vim-lsc-dart",
@@ -179,7 +173,7 @@ return packer.startup(function(use)
 
   -- huge file support
   use({
-    "LunarVim/bigfile.nvim",
+    "pteroctopus/faster.nvim",
   })
   -- gradle Plugin
   use("microsoft/vscode-gradle")
@@ -204,21 +198,22 @@ return packer.startup(function(use)
   use 'stevearc/dressing.nvim'
   use 'MeanderingProgrammer/render-markdown.nvim'
   use 'HakonHarnes/img-clip.nvim'
-  use ({
-    "zbirenbaum/copilot.lua",
-   })
+  -- use ({
+  --   "zbirenbaum/copilot.lua",
+  --  })
   use({
     'yetone/avante.nvim',
     branch = 'main',
     run = 'make',
   })
-  use({ "nomnivore/ollama.nvim", requires = { "nvim-lua/plenary.nvim" } })
+  -- use({ "nomnivore/ollama.nvim", requires = { "nvim-lua/plenary.nvim" } })
   use({
     "ravitemer/mcphub.nvim",
     run = 'lua bundled_build.lua',
     dependencies = {
       "nvim-lua/plenary.nvim",
-    }})
+    }
+  })
 
   -- FTP
   use("tpope/vim-vinegar")

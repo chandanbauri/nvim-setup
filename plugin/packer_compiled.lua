@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/avante.nvim",
     url = "https://github.com/yetone/avante.nvim"
   },
-  ["bigfile.nvim"] = {
-    loaded = true,
-    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/bigfile.nvim",
-    url = "https://github.com/LunarVim/bigfile.nvim"
-  },
   black = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/black",
@@ -124,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.lua"] = {
-    loaded = true,
-    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
-  },
   ["dart-vim-plugin"] = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
@@ -138,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["faster.nvim"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/faster.nvim",
+    url = "https://github.com/pteroctopus/faster.nvim"
   },
   fd = {
     loaded = true,
@@ -246,6 +241,11 @@ _G.packer_plugins = {
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-lint"] = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-lint",
@@ -255,6 +255,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -276,11 +281,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
-  ["ollama.nvim"] = {
-    loaded = true,
-    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/ollama.nvim",
-    url = "https://github.com/nomnivore/ollama.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -306,11 +306,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
-  },
-  rustowl = {
-    loaded = true,
-    path = "/Users/chandanbauri/.local/share/nvim/site/pack/packer/start/rustowl",
-    url = "https://github.com/cordx56/rustowl"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

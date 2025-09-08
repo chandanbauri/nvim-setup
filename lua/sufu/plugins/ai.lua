@@ -17,7 +17,7 @@ end
 --   model = "codellama"
 -- })
 
-ai.setup({
-  model = "codellama",
-  url = "http://localhost:11434",
-})
+-- ai.setup({
+--   model = "codellama",
+--   url = "http://localhost:11434",
+-- })
